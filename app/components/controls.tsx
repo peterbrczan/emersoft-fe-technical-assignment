@@ -5,11 +5,11 @@ import { useGetBlog } from '@/app/hooks/use-get-blog';
 
 export const Controls: FC = (props) => {
   const [searchValue, setSearchValue] = useState('');
-  useGetBlog({ searchValue });
+  const getBlog = useGetBlog({ searchValue });
 
   return (
     <div>
-      <Input handleSearchValue={setSearchValue} />
+      <Input handleSearchValue={setSearchValue} isLoading={getBlog.isLoading} />
     </div>
   );
 };

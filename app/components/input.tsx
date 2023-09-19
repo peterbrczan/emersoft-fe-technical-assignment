@@ -7,6 +7,7 @@ import { useDebounce } from 'use-debounce';
 
 export type InputProps = {
   handleSearchValue: (value: string) => void;
+  isLoading: boolean;
 };
 
 export const Input: FC<InputProps> = (props) => {
@@ -38,7 +39,7 @@ export const Input: FC<InputProps> = (props) => {
         className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-100 "
         placeholder={textCommon('Search for a title')}
         onChange={({ currentTarget: { value } }) => setValue(value)}
-        required
+        disabled={props.isLoading}
       />
     </div>
   );
