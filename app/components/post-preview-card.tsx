@@ -41,7 +41,7 @@ export const PostPreviewCard: FC<PostPreviewCardProps> = (props) => {
   }, [props.categories, props.post]);
 
   return (
-    <div className="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden">
+    <div className="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in">
       <img className="w-full h-48 object-cover" src={getSrc()} alt={props.post.title} onError={onImageError} />
       <div className="px-2 py-2">
         <div className="flex flex-wrap gap-1 mb-2">
