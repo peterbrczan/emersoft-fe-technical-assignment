@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[component]: pagination should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="grid grid-cols-2 gap-1"
+  >
+    <button
+      class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+      disabled=""
+    >
+      <p
+        class="text-sm"
+      >
+        Previous
+      </p>
+    </button>
+    <button
+      class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+    >
+      <p
+        class="text-sm"
+      >
+        Next
+      </p>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`[component]: pagination should with disabled next button match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="grid grid-cols-2 gap-1"
+  >
+    <button
+      class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+      disabled=""
+    >
+      <p
+        class="text-sm"
+      >
+        Previous
+      </p>
+    </button>
+    <button
+      class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+    >
+      <p
+        class="text-sm"
+      >
+        Next
+      </p>
+    </button>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`[component]: pagination should with disabled previous button match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="grid grid-cols-2 gap-1"
+  >
+    <button
+      class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+      disabled=""
+    >
+      <p
+        class="text-sm"
+      >
+        Previous
+      </p>
+    </button>
+    <button
+      class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+      disabled=""
+    >
+      <p
+        class="text-sm"
+      >
+        Next
+      </p>
+    </button>
+  </div>
+</DocumentFragment>
+`;

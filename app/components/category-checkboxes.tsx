@@ -40,6 +40,7 @@ export const CategoryCheckboxes: FC<CategoryCheckboxesProps> = (props) => {
             checked={categorySlugs.includes(category.slug)}
             className="w-[16px] h-[16px] rounded-[4px] cursor-pointer"
             onChange={() => toggleCheckbox(category.slug)}
+            data-testid={category.slug}
           />
           <label htmlFor={category.slug} className="ml-[8px] text-sm font-medium text-gray-900 cursor-pointer">
             {textCategory(category.name)}

@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[component]: category-checkboxes should with categories match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex gap-4 flex-wrap"
+  >
+    <div
+      class="flex items-center"
+    >
+      <input
+        class="w-[16px] h-[16px] rounded-[4px] cursor-pointer"
+        data-testid="books"
+        id="books"
+        type="checkbox"
+      />
+      <label
+        class="ml-[8px] text-sm font-medium text-gray-900 cursor-pointer"
+        for="books"
+      >
+        Books
+      </label>
+    </div>
+    <div
+      class="flex items-center"
+    >
+      <input
+        class="w-[16px] h-[16px] rounded-[4px] cursor-pointer"
+        data-testid="music"
+        id="music"
+        type="checkbox"
+      />
+      <label
+        class="ml-[8px] text-sm font-medium text-gray-900 cursor-pointer"
+        for="music"
+      >
+        Music
+      </label>
+    </div>
+    <div
+      class="flex items-center"
+    >
+      <input
+        class="w-[16px] h-[16px] rounded-[4px] cursor-pointer"
+        data-testid="toys"
+        id="toys"
+        type="checkbox"
+      />
+      <label
+        class="ml-[8px] text-sm font-medium text-gray-900 cursor-pointer"
+        for="toys"
+      >
+        Toys
+      </label>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`[component]: category-checkboxes should without categories match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="flex gap-4 flex-wrap"
+  />
+</DocumentFragment>
+`;

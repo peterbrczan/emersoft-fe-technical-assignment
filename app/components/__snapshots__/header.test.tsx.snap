@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[component]: header should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="border-b-2 border-gray-100 min-h-[80px] grid grid-cols-[1fr_auto] justify-between p-4 gap-[4px]"
+  >
+    <div
+      class="self-center flex gap-2 items-center"
+    >
+      <h1
+        class="text-2xl font-extrabold"
+      >
+        Emersoft
+      </h1>
+      <div
+        class="w-[8px] h-[8px] rounded-full bg-pink-700"
+      />
+      <p>
+        Frontend Technical Assignment
+      </p>
+    </div>
+    <div
+      class="justify-self-end self-center"
+    >
+      <a
+        class="w-[20px] h-[20px] rounded-full"
+        href="/hu"
+      >
+        <img
+          alt="Great Britain flag"
+          class="w-[20px] h-[20px] rounded-full"
+          src="https://flagcdn.com/w40/gb.png"
+        />
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
