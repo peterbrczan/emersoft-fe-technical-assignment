@@ -4,6 +4,7 @@ import { Locale } from '@/app/models/enums/locale';
 import { PropsWithChildren } from 'react';
 import { Comfortaa } from 'next/font/google';
 import { Metadata } from 'next';
+import '../globals.css';
 
 const comfortaa = Comfortaa({ subsets: ['latin'] });
 
@@ -27,10 +28,13 @@ export default async function LocaleLayout({
   }
 
   return (
-    <html lang={locale}>
-      <body className={comfortaa.className}>
+    <html lang={locale} className="bg-gray-100 min-h-screen">
+      <body className={`${comfortaa.className} min-h-screen`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          {children}
+          <div className="w-[100%] md:w-[600px] lg:w-[1000px] min-h-screen mx-auto bg-white">
+            header
+            <div className="p-4">{children}</div>
+          </div>
         </NextIntlClientProvider>
       </body>
     </html>
