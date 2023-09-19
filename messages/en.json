@@ -2,12 +2,16 @@
   "Common": {
     "Search by a title": "Search by a title",
     "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} page / {numberOfTotalPages, plural, =0 {page} =1 {1 page} other {# pages}}",
-    "Frontend Technical Assignment": "Frontend Technical Assignment"
+    "Frontend Technical Assignment": "Frontend Technical Assignment",
+    "We found no post with the given {postId} post id": "We found no post with the given <strong>{postId}</strong> post id...",
+    "Something went wrong!": "Oops something went wrong!",
+    "Looks like we don't have any posts to show": "Looks like we don't have any posts to show..."
   },
   "Label": {
     "Previous": "Previous",
     "Next": "Next",
-    "Back": "Back"
+    "Back": "Back",
+    "Loading": "Loading..."
   },
   "Category": {
     "Books": "Books",
