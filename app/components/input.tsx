@@ -1,15 +1,21 @@
 'use client';
 
 import type { FC } from 'react';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useTranslations } from 'use-intl';
+import { useDebounce } from 'use-debounce';
 
 export type InputProps = {
-  handleInputChange?: (value: string) => void;
+  handleSearchValue: (value: string) => void;
 };
 
 export const Input: FC<InputProps> = (props) => {
   const [value, setValue] = useState('');
+  const [searchValue] = useDebounce(value, 500);
+
+  useEffect(() => {
+    props.handleSearchValue(searchValue);
+  }, [searchValue]);
 
   const textCommon = useTranslations('Common');
 
