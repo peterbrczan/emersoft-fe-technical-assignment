@@ -6,7 +6,7 @@ import { Pagination } from '@/app/components/pagination';
 import { CategoryCheckboxes } from '@/app/components/category-checkboxes';
 import { Category } from '@/app/models/types/category';
 
-export const Controls: FC = (props) => {
+export const Controls: FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
   const [categorySlugs, setCategorySlugs] = useState<string[]>([]);
@@ -33,13 +33,15 @@ export const Controls: FC = (props) => {
   }
 
   return (
-    <div className="grid grid-cols-[1fr_auto] gap-4 items-center justify-between">
-      <Input handleSearchValue={handleSearchValue} />
-      <Pagination
-        pageNumber={pageNumber}
-        numberOfTotalPages={getBlog.data?.numberOfTotalPages ?? 0}
-        handlePageNumber={setPageNumber}
-      />
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-center justify-between mb-4">
+        <Input handleSearchValue={handleSearchValue} />
+        <Pagination
+          pageNumber={pageNumber}
+          numberOfTotalPages={getBlog.data?.numberOfTotalPages ?? 0}
+          handlePageNumber={setPageNumber}
+        />
+      </div>
       <CategoryCheckboxes categories={categories} handleCategorySlugs={handleCategorySlugs} />
     </div>
   );

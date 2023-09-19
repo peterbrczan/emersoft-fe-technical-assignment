@@ -10,7 +10,7 @@ export const Header: FC = () => {
 
   return (
     <div className="border-b-2 border-gray-100 min-h-[80px] grid grid-cols-[1fr_auto] justify-between p-4 gap-[4px]">
-      <div className="self-center flex gap-2 items-center">
+      <div className="self-center flex flex-wrap gap-2 items-center">
         <h1 className="text-2xl font-extrabold">Emersoft</h1>
         <div className="w-[8px] h-[8px] rounded-full bg-pink-700"></div>
         <p>{textCommon('Frontend Technical Assignment')}</p>

@@ -2,59 +2,61 @@
 
 exports[`[component]: controls should match snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="grid grid-cols-[1fr_auto] gap-4 items-center justify-between"
-  >
+  <div>
     <div
-      class="relative"
+      class="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-4 items-center justify-between mb-4"
     >
       <div
-        class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
+        class="relative"
       >
-        <svg
-          class="w-4 h-4 text-gray-500"
-          fill="none"
-          viewBox="0 0 20 20"
+        <div
+          class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none"
         >
-          <path
-            d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-          />
-        </svg>
+          <svg
+            class="w-4 h-4 text-gray-500"
+            fill="none"
+            viewBox="0 0 20 20"
+          >
+            <path
+              d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            />
+          </svg>
+        </div>
+        <input
+          class="block w-full p-2 pl-8 text-sm text-gray-900 border border-gray-300 rounded-[4px] bg-gray-100 "
+          data-testid="search-input"
+          placeholder="Search by a title"
+          type="search"
+        />
       </div>
-      <input
-        class="block w-full p-2 pl-8 text-sm text-gray-900 border border-gray-300 rounded-[4px] bg-gray-100 "
-        data-testid="search-input"
-        placeholder="Search by a title"
-        type="search"
-      />
-    </div>
-    <div
-      class="grid grid-cols-2 gap-1"
-    >
-      <button
-        class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
-        disabled=""
+      <div
+        class="grid grid-cols-2 gap-1"
       >
-        <p
-          class="text-sm"
+        <button
+          class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+          disabled=""
         >
-          Previous
-        </p>
-      </button>
-      <button
-        class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
-        disabled=""
-      >
-        <p
-          class="text-sm"
+          <p
+            class="text-sm"
+          >
+            Previous
+          </p>
+        </button>
+        <button
+          class="bg-pink-700 hover:bg-pink-500 text-white font-bold py-2 px-4 border border-pink-700 rounded disabled:bg-pink-200 disabled:border-0"
+          disabled=""
         >
-          Next
-        </p>
-      </button>
+          <p
+            class="text-sm"
+          >
+            Next
+          </p>
+        </button>
+      </div>
     </div>
     <div
       class="flex gap-4 flex-wrap"

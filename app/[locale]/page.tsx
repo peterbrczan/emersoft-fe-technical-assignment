@@ -5,7 +5,6 @@ import { PostPreviewCard } from '@/app/components/post-preview-card';
 import { PostPreviewCardSkeleton } from '@/app/components/post-preview-card-skeleton';
 import { Controls } from '@/app/components/controls';
 import { useTranslations } from 'use-intl';
-import { useRouter } from 'next/router';
 import { ErrorState } from '@/app/components/error-state';
 import React from 'react';
 import { EmptyState } from '@/app/components/empty-state';
@@ -14,23 +13,27 @@ export default function Home() {
   const getBlog = useGetBlog();
   const textCommon = useTranslations('Common');
 
+  const isEmpty = !getBlog.isLoading && !getBlog.isError && !getBlog.data.blog.posts.length;
+
   return (
     <div>
       <div className="mb-4">
         <Controls />
       </div>
-      <h1 className="mb-4 font-bold">
-        {textCommon('{pageNumber} page / {numberOfTotalPages} pages', {
-          pageNumber: getBlog.data?.pageNumber ?? 0,
-          numberOfTotalPages: getBlog.data?.numberOfTotalPages ?? 0,
-        })}
-      </h1>
+      {!isEmpty && (
+        <h1 className="mb-4 font-bold">
+          {textCommon('{pageNumber} page / {numberOfTotalPages} pages', {
+            pageNumber: getBlog.data?.pageNumber ?? 0,
+            numberOfTotalPages: getBlog.data?.numberOfTotalPages ?? 0,
+          })}
+        </h1>
+      )}
       {getBlog.isError && (
         <ErrorState>
           <p className="text-gray-600 text-sm">{textCommon('Something went wrong!')}</p>
         </ErrorState>
       )}
-      {!getBlog.isLoading && !getBlog.isError && !getBlog.data.blog.posts.length && (
+      {isEmpty && (
         <EmptyState>
           <p className="text-gray-600 text-sm">{textCommon("Looks like we don't have any posts to show")}</p>
         </EmptyState>

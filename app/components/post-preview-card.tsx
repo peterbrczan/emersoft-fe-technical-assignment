@@ -44,7 +44,7 @@ export const PostPreviewCard: FC<PostPreviewCardProps> = (props) => {
 
   return (
     <div
-      className="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in"
+      className="w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in"
       onClick={() => router.push(`/${props.post.id}`)}
     >
       <img className="w-full h-48 object-cover" src={getSrc()} alt={props.post.title} onError={onImageError} />
