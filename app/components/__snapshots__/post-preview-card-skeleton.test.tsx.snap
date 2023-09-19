@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[component]: post-preview-card-skeleton should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden "
+  >
+    <div
+      class="animate-pulse  bg-gray-100 rounded-md dark:bg-gray-300 w-full h-48"
+    />
+    <div
+      class="px-2 py-2"
+    >
+      <div
+        class="flex flex-wrap gap-1 mb-2"
+      >
+        <div
+          class="animate-pulse  bg-gray-100 rounded-md dark:bg-gray-300 h-[28px] w-[100px]"
+        />
+        <div
+          class="animate-pulse  bg-gray-100 rounded-md dark:bg-gray-300 h-[28px] w-[100px]"
+        />
+      </div>
+      <div
+        class="mb-2"
+      >
+        <div
+          class="animate-pulse  bg-gray-100 rounded-md dark:bg-gray-300 h-[28px] w-[200px] mb-1"
+        />
+        <div
+          class="animate-pulse  bg-gray-100 rounded-md dark:bg-gray-300 h-[28px] w-[150px]"
+        />
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;

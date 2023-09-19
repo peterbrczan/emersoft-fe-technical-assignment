@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[component]: empty-state should match snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-gray-200 h-32 p-2 flex items-center justify-center rounded-[4px]"
+  >
+    Oops...there is no result
+  </div>
+</DocumentFragment>
+`;
