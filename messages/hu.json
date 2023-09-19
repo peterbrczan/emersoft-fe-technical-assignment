@@ -1,6 +1,11 @@
 {
   "Common": {
-    "Search for a title": "Keresés cím alapján"
+    "Search by a title": "Keresés cím alapján",
+    "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} oldal / {numberOfTotalPages} oldal"
+  },
+  "Label": {
+    "Previous": "Előző",
+    "Next": "Következő"
   },
   "Category": {
     "Books": "Könyvek",

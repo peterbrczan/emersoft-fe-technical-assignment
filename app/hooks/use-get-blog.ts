@@ -1,16 +1,17 @@
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { HttpClient } from '@/app/utils/http-client';
-import { Blog } from '@/app/models/types/blog';
-import { SearchParams } from '@/app/models/types/search-params';
 import queryString from 'query-string';
+import { SearchParams } from '@/app/models/types/search-params';
+import { ResponseBlog } from '@/app/models/types/reponse';
 
 export function useGetBlog(searchParams: SearchParams = {}) {
   const queryClient = useQueryClient();
-  const search = queryString.stringify(searchParams, { arrayFormat: 'bracket' });
+  const defaultSearchParams: SearchParams = { pageNumber: 1, limit: 4, ...searchParams };
+  const search = queryString.stringify(defaultSearchParams, { arrayFormat: 'bracket' });
 
   return useQuery({
     queryKey: ['get-blog', searchParams],
-    queryFn: async () => HttpClient.get<Blog>(`/api/blog?${search}`),
+    queryFn: async () => HttpClient.get<ResponseBlog>(`/api/blog?${search}`),
     onSuccess: (data) => {
       queryClient.setQueryData(['get-blog', {}], data);
     },
