@@ -1,6 +1,5 @@
 import { render } from '@/app/utils/test-renderer';
 import { Controls } from '@/app/components/controls';
-import { jest } from '@jest/globals';
 
 jest.mock('query-string', () => ({
   __esModule: true,
