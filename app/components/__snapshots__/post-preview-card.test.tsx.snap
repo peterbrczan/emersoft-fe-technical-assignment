@@ -3,7 +3,7 @@
 exports[`[component]: post-preview-card should with categories match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in"
+    class="w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in"
   >
     <img
       alt="Lorem Ipsum"
@@ -61,7 +61,7 @@ exports[`[component]: post-preview-card should with categories match snapshot 1`
 exports[`[component]: post-preview-card should without categories match snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in"
+    class="w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in"
   >
     <img
       alt="Lorem Ipsum"
