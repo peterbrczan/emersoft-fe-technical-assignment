@@ -5,6 +5,7 @@ import { PropsWithChildren } from 'react';
 import { Comfortaa } from 'next/font/google';
 import { Metadata } from 'next';
 import '../globals.css';
+import { LanguageSelector } from '@/app/components/language-selector';
 
 const comfortaa = Comfortaa({ subsets: ['latin'] });
 
@@ -32,7 +33,7 @@ export default async function LocaleLayout({
       <body className={`${comfortaa.className} min-h-screen`}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <div className="w-[100%] md:w-[600px] lg:w-[1000px] min-h-screen mx-auto bg-white">
-            header
+            <LanguageSelector />
             <div className="p-4">{children}</div>
           </div>
         </NextIntlClientProvider>
