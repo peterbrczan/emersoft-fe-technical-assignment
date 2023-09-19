@@ -5,7 +5,7 @@ import React from 'react';
 import { useTranslations } from 'use-intl';
 import { LanguageSelector } from '@/app/components/language-selector';
 
-export const Header: FC = (props) => {
+export const Header: FC = () => {
   const textCommon = useTranslations('Common');
 
   return (
