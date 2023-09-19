@@ -6,7 +6,7 @@ import { Pagination } from '@/app/components/pagination';
 import { CategoryCheckboxes } from '@/app/components/category-checkboxes';
 import { Category } from '@/app/models/types/category';
 
-export const Controls: FC = (props) => {
+export const Controls: FC = () => {
   const [searchValue, setSearchValue] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
   const [categorySlugs, setCategorySlugs] = useState<string[]>([]);
