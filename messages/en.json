@@ -6,7 +6,8 @@
   },
   "Label": {
     "Previous": "Previous",
-    "Next": "Next"
+    "Next": "Next",
+    "Back": "Back"
   },
   "Category": {
     "Books": "Books",

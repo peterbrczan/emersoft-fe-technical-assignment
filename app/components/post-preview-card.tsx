@@ -5,6 +5,7 @@ import React, { useMemo, useState } from 'react';
 import { Post } from '@/app/models/types/post';
 import { Category } from '@/app/models/types/category';
 import { useTranslations } from 'use-intl';
+import { useRouter } from 'next/navigation';
 
 export type PostPreviewCardProps = {
   post: Post;
@@ -13,6 +14,7 @@ export type PostPreviewCardProps = {
 
 export const PostPreviewCard: FC<PostPreviewCardProps> = (props) => {
   const [isImageError, setIsImageError] = useState(false);
+  const router = useRouter();
 
   const textCategory = useTranslations('Category');
 
@@ -41,7 +43,10 @@ export const PostPreviewCard: FC<PostPreviewCardProps> = (props) => {
   }, [props.categories, props.post]);
 
   return (
-    <div className="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in">
+    <div
+      className="max-w-xs w-[100%] h-[100%] bg-white shadow-md rounded-[4px] overflow-hidden cursor-pointer hover:-translate-y-1.5 transition-all ease-in"
+      onClick={() => router.push(`/${props.post.id}`)}
+    >
       <img className="w-full h-48 object-cover" src={getSrc()} alt={props.post.title} onError={onImageError} />
       <div className="px-2 py-2">
         <div className="flex flex-wrap gap-1 mb-2">
