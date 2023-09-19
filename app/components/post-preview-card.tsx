@@ -4,6 +4,7 @@ import type { FC } from 'react';
 import React, { useMemo, useState } from 'react';
 import { Post } from '@/app/models/types/post';
 import { Category } from '@/app/models/types/category';
+import { useTranslations } from 'use-intl';
 
 export type PostPreviewCardProps = {
   post: Post;
@@ -12,6 +13,8 @@ export type PostPreviewCardProps = {
 
 export const PostPreviewCard: FC<PostPreviewCardProps> = (props) => {
   const [isImageError, setIsImageError] = useState(false);
+
+  const textCategory = useTranslations('Category');
 
   function onImageError() {
     setIsImageError(true);
@@ -44,7 +47,7 @@ export const PostPreviewCard: FC<PostPreviewCardProps> = (props) => {
         <div className="flex flex-wrap gap-1 mb-2">
           {mappedCategories.map((category) => (
             <span key={category.slug} className="bg-pink-700 rounded-[4px] px-1 py-1 text-sm font-semibold text-white">
-              <p className="text-sm">{category.name}</p>
+              <p className="text-sm">{textCategory(category.name)}</p>
             </span>
           ))}
         </div>
