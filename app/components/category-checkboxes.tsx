@@ -33,7 +33,7 @@ export const CategoryCheckboxes: FC<CategoryCheckboxesProps> = (props) => {
   return (
     <div className="flex gap-4 flex-wrap">
       {props.categories.map((category) => (
-        <div className="flex items-center">
+        <div key={category.slug} className="flex items-center">
           <input
             id={category.slug}
             type="checkbox"

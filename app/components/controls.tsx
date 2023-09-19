@@ -18,7 +18,7 @@ export const Controls: FC = (props) => {
     if (getBlog.isFetched) {
       setCategories(getBlog.data?.blog.categories ?? []);
     }
-  }, [getBlog.data]);
+  }, [getBlog.data, getBlog.isFetched]);
 
   function handleSearchValue(searchValue: string) {
     // Resetting the page number
