@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { useTranslations } from 'use-intl';
 import React from 'react';
 import { EmptyState } from '@/app/components/empty-state';
-import {ErrorState} from "@/app/components/error-state";
+import { ErrorState } from '@/app/components/error-state';
 
 export default function Post() {
   const params = useParams() as { postId: string };
@@ -24,13 +24,19 @@ export default function Post() {
       </div>
       <div>
         {getPost.isLoading && <p className="text-sm">{textLabel('Loading')}</p>}
-        {getPost.isError && <ErrorState><p className="text-gray-600 text-sm">{textCommon('Something went wrong!')}</p></ErrorState>}
-        {!getPost.isLoading &&  !getPost.isError && !getPost.data && (
+        {getPost.isError && (
+          <ErrorState>
+            <p className="text-gray-600 text-sm">{textCommon('Something went wrong!')}</p>
+          </ErrorState>
+        )}
+        {!getPost.isLoading && !getPost.isError && !getPost.data && (
           <EmptyState>
-            <p className="text-gray-600 text-sm">{textCommon.rich('We found no post with the given {postId} post id', {
-              postId: params.postId,
-              strong: (text) => <span className="font-extrabold">{text}</span>,
-            })}}</p>
+            <p className="text-gray-600 text-sm">
+              {textCommon.rich('We found no post with the given {postId} post id', {
+                postId: params.postId,
+                strong: (text) => <span className="font-extrabold">{text}</span>,
+              })}
+            </p>
           </EmptyState>
         )}
         {!getPost.isLoading && getPost.data && (
