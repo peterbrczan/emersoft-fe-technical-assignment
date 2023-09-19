@@ -1,4 +1,4 @@
-function getRandomDivisibleBy500() {
+export function getRandomDivisibleBy500() {
   const min = 1000;
   const max = 5000;
   const step = 500;
