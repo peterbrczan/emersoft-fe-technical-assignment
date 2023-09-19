@@ -2,12 +2,16 @@
   "Common": {
     "Search by a title": "Keresés cím alapján",
     "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} oldal / {numberOfTotalPages} oldal",
-    "Frontend Technical Assignment": "Frontend Házi Feladat"
+    "Frontend Technical Assignment": "Frontend Házi Feladat",
+    "We found no post with the given {postId} post id": "Nem találtunk a megadott <strong>{postId}</strong> postId-val posztot...",
+    "Something went wrong!": "Ajaj...valami hiba történt!",
+    "Looks like we don't have any posts to show": "Úgy tűnik most nincs poszt amit kilistázhatunk..."
   },
   "Label": {
     "Previous": "Előző",
     "Next": "Következő",
-    "Back": "Vissza"
+    "Back": "Vissza",
+    "Loading": "Egy pillanat..."
   },
   "Category": {
     "Books": "Könyvek",

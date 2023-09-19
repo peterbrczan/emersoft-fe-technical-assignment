@@ -6,6 +6,9 @@ import { PostPreviewCardSkeleton } from '@/app/components/post-preview-card-skel
 import { Controls } from '@/app/components/controls';
 import { useTranslations } from 'use-intl';
 import { useRouter } from 'next/router';
+import { ErrorState } from '@/app/components/error-state';
+import React from 'react';
+import { EmptyState } from '@/app/components/empty-state';
 
 export default function Home() {
   const getBlog = useGetBlog();
@@ -22,6 +25,16 @@ export default function Home() {
           numberOfTotalPages: getBlog.data?.numberOfTotalPages ?? 0,
         })}
       </h1>
+      {getBlog.isError && (
+        <ErrorState>
+          <p className="text-gray-600 text-sm">{textCommon('Something went wrong!')}</p>
+        </ErrorState>
+      )}
+      {!getBlog.isLoading && !getBlog.isError && !getBlog.data.blog.posts.length && (
+        <EmptyState>
+          <p className="text-gray-600 text-sm">{textCommon("Looks like we don't have any posts to show")}</p>
+        </EmptyState>
+      )}
       <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {getBlog.isLoading && new Array(4).fill('').map((_, index) => <PostPreviewCardSkeleton key={index} />)}
         {getBlog.data?.blog.posts.map((post) => (
