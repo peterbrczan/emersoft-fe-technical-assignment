@@ -7,6 +7,7 @@ import { Metadata } from 'next';
 import '../globals.css';
 import { LanguageSelector } from '@/app/components/language-selector';
 import ClientProviders from '@/app/providers/client-providers';
+import { Header } from '@/app/components/header';
 
 const comfortaa = Comfortaa({ subsets: ['latin'] });
 
@@ -35,7 +36,7 @@ export default async function LocaleLayout({
         <NextIntlClientProvider locale={locale} messages={messages}>
           <ClientProviders>
             <div className="w-[100%] md:w-[600px] lg:w-[1000px] min-h-screen mx-auto bg-white">
-              <LanguageSelector />
+              <Header />
               <div className="p-4">{children}</div>
             </div>
           </ClientProviders>

@@ -1,7 +1,8 @@
 {
   "Common": {
     "Search by a title": "Search by a title",
-    "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} page / {numberOfTotalPages, plural, =0 {page} =1 {1 page} other {# pages}}"
+    "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} page / {numberOfTotalPages, plural, =0 {page} =1 {1 page} other {# pages}}",
+    "Frontend Technical Assignment": "Frontend Technical Assignment"
   },
   "Label": {
     "Previous": "Previous",

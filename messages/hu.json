@@ -1,7 +1,8 @@
 {
   "Common": {
     "Search by a title": "Keresés cím alapján",
-    "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} oldal / {numberOfTotalPages} oldal"
+    "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} oldal / {numberOfTotalPages} oldal",
+    "Frontend Technical Assignment": "Frontend Házi Feladat"
   },
   "Label": {
     "Previous": "Előző",
