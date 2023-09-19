@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Input } from '@/app/components/input';
 import { useGetBlog } from '@/app/hooks/use-get-blog';
 import { Pagination } from '@/app/components/pagination';
@@ -34,7 +34,7 @@ export const Controls: FC = (props) => {
 
   return (
     <div className="grid grid-cols-[1fr_auto] gap-4 items-center justify-between">
-      <Input handleSearchValue={handleSearchValue} isLoading={getBlog.isLoading} />
+      <Input handleSearchValue={handleSearchValue} />
       <Pagination
         pageNumber={pageNumber}
         numberOfTotalPages={getBlog.data?.numberOfTotalPages ?? 0}
