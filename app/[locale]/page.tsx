@@ -5,6 +5,7 @@ import { PostPreviewCard } from '@/app/components/post-preview-card';
 import { PostPreviewCardSkeleton } from '@/app/components/post-preview-card-skeleton';
 import { Controls } from '@/app/components/controls';
 import { useTranslations } from 'use-intl';
+import { useRouter } from 'next/router';
 
 export default function Home() {
   const getBlog = useGetBlog();

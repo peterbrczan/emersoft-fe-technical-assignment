@@ -1,3 +1,5 @@
+import { Category } from '@/app/models/types/category';
+
 export type Post = {
   id: number;
   slug: string;
@@ -6,3 +8,5 @@ export type Post = {
   imageUrl: string;
   categories: number[];
 };
+
+export type StandalonePost = Omit<Post, 'categories'> & { categories: Category[] };

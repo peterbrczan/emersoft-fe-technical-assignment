@@ -6,7 +6,8 @@
   },
   "Label": {
     "Previous": "Előző",
-    "Next": "Következő"
+    "Next": "Következő",
+    "Back": "Vissza"
   },
   "Category": {
     "Books": "Könyvek",
