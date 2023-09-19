@@ -1,6 +1,10 @@
 {
   "Common": {
-    "Search for a title": "Keresés cím alapján"
+    "Search by a title": "Keresés cím alapján"
+  },
+  "Label": {
+    "Previous": "Előző",
+    "Next": "Következő"
   },
   "Category": {
     "Books": "Könyvek",

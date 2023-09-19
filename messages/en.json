@@ -1,6 +1,10 @@
 {
   "Common": {
-    "Search for a title": "Search for a title"
+    "Search by a title": "Search by a title"
+  },
+  "Label": {
+    "Previous": "Previous",
+    "Next": "Next"
   },
   "Category": {
     "Books": "Books",

@@ -36,8 +36,8 @@ export const Input: FC<InputProps> = (props) => {
       <input
         type="search"
         id="default-search"
-        className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-100 "
-        placeholder={textCommon('Search for a title')}
+        className="block w-full p-2 pl-8 text-sm text-gray-900 border border-gray-300 rounded-[4px] bg-gray-100 "
+        placeholder={textCommon('Search by a title')}
         onChange={({ currentTarget: { value } }) => setValue(value)}
         disabled={props.isLoading}
       />
