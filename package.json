@@ -26,7 +26,8 @@
     "prettier": "prettier --write ./app/**/*.{ts,tsx}",
     "sort-package-json": "npx sort-package-json",
     "start": "next start",
-    "test:unit": "jest --watch --silent"
+    "test:unit": "jest --watch --silent",
+    "test:unit:ci": "jest --watch=false --silent"
   },
   "prettier": {
     "endOfLine": "auto",
