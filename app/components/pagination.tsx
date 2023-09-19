@@ -11,25 +11,20 @@ export type PaginationProps = {
 };
 
 export const Pagination: FC<PaginationProps> = (props) => {
-  const [pageNumber, setPageNumber] = useState(props.pageNumber);
   const textLabel = useTranslations('Label');
 
-  useEffect(() => {
-    props.handlePageNumber(pageNumber);
-  }, [pageNumber]);
-
-  const isNextButtonDisabled = pageNumber + 1 > props.numberOfTotalPages;
-  const isPreviousButtonDisabled = pageNumber - 1 < 1;
+  const isNextButtonDisabled = props.pageNumber + 1 > props.numberOfTotalPages;
+  const isPreviousButtonDisabled = props.pageNumber - 1 < 1;
 
   function handleNextPage() {
     if (!isNextButtonDisabled) {
-      setPageNumber((previousPageNumber) => previousPageNumber + 1);
+      props.handlePageNumber(props.pageNumber + 1);
     }
   }
 
   function handlePreviousPage() {
     if (!isPreviousButtonDisabled) {
-      setPageNumber((previousPageNumber) => previousPageNumber - 1);
+      props.handlePageNumber(props.pageNumber - 1);
     }
   }
 
