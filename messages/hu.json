@@ -1,6 +1,7 @@
 {
   "Common": {
-    "Search by a title": "Keresés cím alapján"
+    "Search by a title": "Keresés cím alapján",
+    "{pageNumber} page / {numberOfTotalPages} pages": "{pageNumber} oldal / {numberOfTotalPages} oldal"
   },
   "Label": {
     "Previous": "Előző",
